@@ -3,7 +3,7 @@
 //  print_r($_GET);
 //  exit;
 
- $roomname = $_GET['roomname'];
+ $roomname = base64_decode($_GET['roomname']);
 
  include 'db_connect.php';
 
@@ -14,7 +14,7 @@
         $msg = "Room Alerday exist please chooes new one";
         echo '<script language="javascript">';
         echo 'alert("'.$msg.'");';
-        echo 'window.location="http://localhost/HTML/index.php";';
+        echo 'window.location="http://localhost/chatAppPHP/index.php";';
         echo '</script>';
     }
  } else {
@@ -101,7 +101,6 @@ body {
   </header>
 <br>
 <br>
-<br>
 <h2 class="offset-4">Chat Room Name - <?php echo $roomname ?></h2>
 <br>
 <div class="col-sm-3"></div>
@@ -128,7 +127,7 @@ body {
 
 <script type="text/javascript">
 
-    setInterval(getmsgFun, 1000);
+    setInterval(getmsgFun, 300);
 
         function getmsgFun(){
             $.post('getMsgs.php', {room: '<?php echo $roomname; ?>'},

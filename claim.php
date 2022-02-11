@@ -34,6 +34,9 @@ if($result){
     } else {
         $sql1 = "INSERT INTO rooms SET roomname = '$room', `time` = CURRENT_TIMESTAMP ";
         if(mysqli_query($conn, $sql1)) {
+           $room = base64_encode($room);
+        //    echo $room;
+        //    exit;
             $msg = "Your room ready chat start";
             echo '<script language="javascript">';
             echo 'alert("'.$msg.'");';
