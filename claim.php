@@ -6,13 +6,13 @@ if(strlen($room) > 20 or strlen($room) < 2 ){
     $msg = "Please chooes name between 2 to 20 characters";
     echo '<script language="javascript">';
     echo 'alert("'.$msg.'");';
-    echo 'window.location="http://localhost/HTML/index.php";';
+    echo 'window.location="http://localhost/chatAppPHP/index.php";';
     echo '</script>';
 }elseif(!ctype_alnum($room)){
     $msg = "Please chooes name alpha characters";
     echo '<script language="javascript">';
     echo 'alert("'.$msg.'");';
-    echo 'window.location="http://localhost/HTML/index.php";';
+    echo 'window.location="http://localhost/chatAppPHP/index.php";';
 
     echo '</script>';
 } else{
@@ -28,7 +28,7 @@ if($result){
         $msg = "Room Alerday exist please chooes new one";
         echo '<script language="javascript">';
         echo 'alert("'.$msg.'");';
-        echo 'window.location="http://localhost/HTML/index.php";';
+        echo 'window.location="http://localhost/chatAppPHP/index.php";';
 
         echo '</script>';
     } else {
@@ -37,7 +37,7 @@ if($result){
             $msg = "Your room ready chat start";
             echo '<script language="javascript">';
             echo 'alert("'.$msg.'");';
-            echo 'window.location="http://localhost/HTML/rooms.php?roomname='.$room .'";';
+            echo 'window.location="http://localhost/chatAppPHP/rooms.php?roomname='.$room .'";';
     
             echo '</script>';
         }

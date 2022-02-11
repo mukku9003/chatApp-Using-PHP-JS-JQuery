@@ -32,10 +32,11 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <style>
 body {
   margin: 0 auto;
-  max-width: 800px;
+  /* max-width: 800px; */
   padding: 0 20px;
 }
 
@@ -43,8 +44,8 @@ body {
   border: 2px solid #dedede;
   background-color: #f1f1f1;
   border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 20px;
+  margin: 20px 0;
 }
 
 .darker {
@@ -86,23 +87,39 @@ body {
     overflow-y: scroll;
 }
 </style>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-
-<h2>Chat Messages - <?php echo $roomname ?></h2>
-
+<header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">ApniBaatBinaDare.com</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+<br>
+<br>
+<br>
+<h2 class="offset-4">Chat Room Name - <?php echo $roomname ?></h2>
+<br>
+<div class="col-sm-3"></div>
 <div class="container">
     <div class="scroln">
 
        
     </div>
-</div>
+    <br><br>
+    
+    
+    <input type="text" class="form-control" name="usermsg" id="usermsg" placeholder="MSG"><br>
+    <button class="btn btn-success" name="submitbtn" id="submitbtn" > SEND</button>
+  </div>
 
-
-
-<input type="text" class="form-control" name="usermsg" id="usermsg" placeholder="MSG"><br>
-<button class="btn btn-success" name="submitbtn" id="submitbtn" > SEND</button>
+  <footer class="mt-auto text-white-50">
+    <p><a href="https://twitter.com/mdo" class="text-dark">@MCL</a>.</p>
+  </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

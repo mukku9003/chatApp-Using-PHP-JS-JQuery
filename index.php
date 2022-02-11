@@ -65,8 +65,8 @@
     <p class="lead">
         <form action="claim.php" method="POST"> 
             <div class="row">
-            <div class="col-sm-3 ml-5">
-            </div>
+              <div class="col-sm-3 ml-5">
+              </div>
                 <div class="col-sm-2 ml-5">
                     <label class="label-control"> apnibaatbinadare.com/</label>
                 </div>
